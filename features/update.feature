@@ -126,6 +126,7 @@ Feature: update
       source 'https://somehost.com'
       """
 
+  @announce-output
   Scenario: Modifying an existing file and committing the change
     Given a directory named "sources"
     And I run `git clone https://github.com/maestrodev/puppet-test sources/puppet-test`
