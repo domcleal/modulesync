@@ -153,6 +153,8 @@ Feature: update
       """
       source '<%= @configs['gem_source'] %>'
       """
+    And I run `git config user.name Test`
+    And I run `git config user.email test@example.com`
     When I run `msync update -m "Update Gemfile" -r test`
     Then the exit status should be 0
     Given I cd to "sources/puppet-test"
